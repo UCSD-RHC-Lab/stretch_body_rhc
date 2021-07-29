@@ -1,5 +1,5 @@
 import unittest
-import stretch_body.robot_params
+import stretch_body
 
 
 class TestRobotParams(unittest.TestCase):

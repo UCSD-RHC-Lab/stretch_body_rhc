@@ -3,9 +3,9 @@ import stretch_body.robot_params
 #stretch_body.robot_params.RobotParams.set_logging_level("DEBUG")
 
 import unittest
-import stretch_body.device
-import stretch_body.robot as robot
+import stretch_body
 import numpy as np
+
 
 class TestTimingStats(unittest.TestCase):
     def test_thread_starvation_group_sync_read(self):

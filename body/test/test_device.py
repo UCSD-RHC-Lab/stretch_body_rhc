@@ -1,5 +1,5 @@
 import unittest
-import stretch_body.device
+import stretch_body
 
 
 class TestDevice(unittest.TestCase):

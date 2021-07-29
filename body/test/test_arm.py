@@ -3,7 +3,7 @@ import stretch_body.robot_params
 stretch_body.robot_params.RobotParams.set_logging_level("DEBUG")
 
 import unittest
-import stretch_body.arm
+import stretch_body
 
 import time
 

@@ -7,8 +7,7 @@ import unittest
 import time
 import stretch_body.hello_utils as hello_utils
 import random
-import stretch_body.device
-import stretch_body.robot as robot
+import stretch_body
 d=stretch_body.device.Device() #Create logger
 
 class TestTimingStats(unittest.TestCase):
@@ -28,7 +27,7 @@ class TestTimingStats(unittest.TestCase):
 
     def test_robot_loops(self):
         print('Starting test_robot_loops')
-        r = robot.Robot()
+        r = stretch_body.robot.Robot()
         r.startup()
         time.sleep(3.0)
         r.non_dxl_thread.stats.pretty_print()

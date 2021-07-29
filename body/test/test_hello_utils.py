@@ -1,5 +1,5 @@
 import unittest
-import stretch_body.hello_utils
+import stretch_body
 
 import time
 import warnings
