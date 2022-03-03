@@ -70,6 +70,17 @@ apply_global_histogram_equalization = False
 # Initialize
 ####################################
 
+# Issue a hardware reset of the camera
+ctx = rs.context()
+devices = ctx.query_devices()
+try:
+    device = devices[0]
+    device.hardware_reset()
+    print('Hardware resetting the camera...')
+    time.sleep(1)
+except:
+    print('Failed to hardware reset.')
+
 # Configure depth and color streams.
 # Note: width/heights are swapped since the images will be rotated 90 degrees from what the camera captures.
 pipeline = rs.pipeline()
