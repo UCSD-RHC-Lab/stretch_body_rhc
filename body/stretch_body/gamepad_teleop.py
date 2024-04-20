@@ -72,7 +72,7 @@ class GamePadTeleop(Device):
         self.gripper = None
         self.wrist_pitch_command = None
         self.wrist_roll_command = None
-        self.is_gamepad_dongle = False
+        # self.is_gamepad_dongle = False
         
         if self.using_stretch_gripper():
             self.gripper = gamepad_joints.CommandGripperPosition()
@@ -256,7 +256,7 @@ class GamePadTeleop(Device):
             robot = self.robot
         with self.lock:
             self.controller_state = self.gamepad_controller.gamepad_state
-            self.is_gamepad_dongle = self.gamepad_controller.is_gamepad_dongle
+            # self.is_gamepad_dongle = self.gamepad_controller.is_gamepad_dongle
         
     def _update_state(self, state = None):
         with self.lock:
@@ -264,7 +264,7 @@ class GamePadTeleop(Device):
                 self.controller_state = self.gamepad_controller.gamepad_state
             else:
                 self.controller_state = state
-        self.is_gamepad_dongle = self.gamepad_controller.is_gamepad_dongle
+        # self.is_gamepad_dongle = self.gamepad_controller.is_gamepad_dongle
         
     def startup(self, robot = None):
         """Start the gamepad controller thread and robot thread if required.
